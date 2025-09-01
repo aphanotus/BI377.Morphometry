@@ -1,6 +1,6 @@
 # BI377  Morphometry: The Study of Form
 
-![](images/header.jpg)
+![](images/header_seal.jpg)
 
 **Colby College  -  Fall 2025  -  Syllabus**
 
