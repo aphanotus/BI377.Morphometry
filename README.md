@@ -47,7 +47,7 @@ Class rosters are provided to each instructor with each student's legal name. I 
 
 ### Computational Resources
 
-During this course we will explore the principles of [open data](https://opendatahandbook.org/guide/en/what-is-open-data/) and [open science](https://www.cos.io/about). In that spirit, the [syllabus](https://github.com/aphanotus/openEd/blob/main/BI377.morphometry/BI377.24F.morphometry.syllabus.md) and other static resources are available and updated on [GitHub](https://github.com/aphanotus/openEd/tree/main/BI377.morphometry). Copyrighted materials will be shared using Colby's learning management system, [Moodle](https://moodle.colby.edu/). We will make measurements of photographic data using the free imaging suite [Fiji](https://imagej.net/software/fiji/). Students should be familiar with [Google Sheets](https://workspace.google.com/products/sheets/), where we will share data. We will introduce analytical tools and pipelines in the statistical programming language [R](https://www.r-project.org/), and the course has a dedicated [Rstudio](https://posit.co/products/open-source/rstudio/) server accessible at https://bi377.colby.edu/ (Colby Access or VPN connection required.) To facilitate peer-to-peer collaboration on coding, we will use [Markdown](https://www.markdownguide.org/) via [HackMD](https://hackmd.io/@ColbyBI377/landingpage). Each student will be asked to set-up a free account with [HackMD](https://hackmd.io/). 
+During this course we will explore the principles of [open data](https://opendatahandbook.org/guide/en/what-is-open-data/) and [open science](https://www.cos.io/about). In that spirit, the [syllabus](https://github.com/aphanotus/openEd/blob/main/BI377.morphometry/BI377.24F.morphometry.syllabus.md) and other static resources are available and updated on [GitHub](https://github.com/aphanotus/openEd/tree/main/BI377.morphometry). Copyrighted materials will be shared using Colby's learning management system, [Moodle](https://moodle.colby.edu/). We will make measurements of photographic data using the free imaging suite [Fiji](https://imagej.net/software/fiji/). Students should be familiar with [Google Sheets](https://workspace.google.com/products/sheets/), where we will share data. We will introduce analytical tools and pipelines in the statistical programming language [R](https://www.r-project.org/), using Colby's [Rstudio](https://posit.co/products/open-source/rstudio/) server accessible at https://rstudio.colby.edu/  To access this resource on campus you must use the[Colby Access](https://colby.teamdynamix.com/TDClient/1928/Portal/KB/ArticleDet?ID=156229) WiFi system. Off-campus you can access the Rstudio server by running Colby's [VPN client](https://colby.teamdynamix.com/TDClient/1928/Portal/KB/ArticleDet?ID=140022). To facilitate peer-to-peer collaboration on coding, we will use [Markdown](https://www.markdownguide.org/) via [HackMD](https://hackmd.io/@ColbyBI377/landingpage). Each student will be asked to set-up a free account with [HackMD](https://hackmd.io/). 
 
 
 ### Assessments
@@ -100,9 +100,9 @@ Confidential support services:
 - [Office of Religious and Spiritual Life](https://life.colby.edu/what-to-do/spiritual-life/) (207-859-4272 )
 - [Maine Coalition Against Sexual Assault](https://www.mecasa.org/) (24/7 helpline: 1-800-871-7741)
 
-### Accommodations for public health
+### Public health
 
-If you experience symptoms of a contagious respiratory illness, such as [covid-19](https://www.cdc.gov/covid/signs-symptoms/) or [flu](https://www.cdc.gov/flu/signs-symptoms/index.html), please attend class if wearing a [KN-95](https://www.cdc.gov/respiratory-viruses/prevention/masks.html) face mask or similar design.
+If you experience symptoms of a contagious respiratory illness, such as [covid-19](https://www.cdc.gov/covid/signs-symptoms/) or [flu](https://www.cdc.gov/flu/signs-symptoms/index.html), please only attend class if you wear a [KN-95](https://www.cdc.gov/respiratory-viruses/prevention/masks.html) face mask or similar design.
 
 
 
@@ -112,7 +112,7 @@ If you experience symptoms of a contagious respiratory illness, such as [covid-1
 |:---- |:----:|:---- |:---- |:---- |
 | Sept 8 |  | Introductions & Overview | Kondrashov 2016 (p9-25, 60-69, 75-100) | 1. Markdown & R |
 | Sept 15 | 1 | Open science; Measurement; Hypothesis testing | [O'Dea et al. 2021](https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-021-01006-3); [Ross-Hellauer 2022](https://www.nature.com/articles/d41586-022-00724-0); Nguyen 2021 ([abstract](https://onlinelibrary.wiley.com/doi/abs/10.1111/phpr.12823) or [video](https://www.youtube.com/watch?v=8JEzXL5OXPI)); [Heard 2023](https://scientistseessquirrel.wordpress.com/2023/11/14/the-case-against-open-data/) | 2. Descriptive statistics, hypothesis testing |
-| Sept 22 |  | Sampling; ANOVA | [Numbers around us 2024](https://medium.com/number-around-us/guarding-against-misleading-data-503424ecd457); [Navarro 2019 Ch17.1-2](https://learningstatisticswithr.com/book/bayes.html) | 3. Data curation; univariate ANOVA |
+| Sept 22 |  | Sampling; ANOVA | [Numbers around us 2024](https://medium.com/number-around-us/guarding-against-misleading-data-503424ecd457); [Bolker 2008](https://math.mcmaster.ca/~bolker/emdbook/Bolker_proofs.pdf) (p5-17); [Navarro 2019 Ch17.1-2](https://learningstatisticswithr.com/book/bayes.html) | 3. Data curation; univariate ANOVA |
 | Sept 29 | 2 | Representing shapes | Zelditch et al. 2012 (p1-17, 23-35); [Crampton 1995](https://www.scup.com/doi/10.1111/j.1502-3931.1995.tb01611.x) | 4. Data acquisition |
 | Oct 6 |  | Procrustes alignment | Zelditch et al. 2012 (p51, 53-57) | 5. Procrustes |
 | Oct 20 | 3 | Morphospace; Ordination | Zelditch et al. 2012 (p59-60, 62-67, 69-73, 75-102) | 6. PCA |
