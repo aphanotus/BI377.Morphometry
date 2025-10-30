@@ -119,16 +119,16 @@ If you experience symptoms of a contagious respiratory illness, such as [covid-1
 
 | date | quiz | topic | readings | exercise |
 |:---- |:----:|:---- |:---- |:---- |
-| Sept 8 |  | Introductions & Overview | Kondrashov 2016 (p9-25, 60-69, 75-100) | 1. Markdown & R |
-| Sept 15 | 1 | Open science; Measurement; Hypothesis testing | [O'Dea et al. 2021](https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-021-01006-3); [Ross-Hellauer 2022](https://www.nature.com/articles/d41586-022-00724-0); Nguyen 2021 ([abstract](https://onlinelibrary.wiley.com/doi/abs/10.1111/phpr.12823) or [video](https://www.youtube.com/watch?v=8JEzXL5OXPI)); [Heard 2023](https://scientistseessquirrel.wordpress.com/2023/11/14/the-case-against-open-data/) | 2. Descriptive statistics, hypothesis testing |
-| Sept 22 |  | Sampling; ANOVA | [Numbers around us 2024](https://medium.com/number-around-us/guarding-against-misleading-data-503424ecd457); [Bolker 2008](https://math.mcmaster.ca/~bolker/emdbook/Bolker_proofs.pdf) (p5-17); [Navarro 2019 Ch17.1-2](https://learningstatisticswithr.com/book/bayes.html) | 3. Data curation; univariate ANOVA |
-| Sept 29 | 2 | Representing shapes | Zelditch et al. 2012 (p1-17, 23-35); [Crampton 1995](https://www.scup.com/doi/10.1111/j.1502-3931.1995.tb01611.x) | 4. Data acquisition |
-| Oct 6 |  | Procrustes alignment | Zelditch et al. 2012 (p51, 53-57) | 5. Procrustes |
-| Oct 20 | 3 | Morphospace; Ordination | Zelditch et al. 2012 (p59-60, 62-67, 69-73, 75-102) | 6. PCA |
-| Oct 27 |  | Generalized linear modeling | Kondrashov 2016 (p 177-196) | 7. Modeling |
-| Nov 3 | 4 | Disparity; Modularity; Phylogeny | Revell & Harmon 2022; Symonds & Blomberg 2014 | 8. Misc tests |
+| Sept 8 |  | Introductions & Overview | Kondrashov 2016 (p9-25, 60-69, 75-100) | [1. Markdown & R](https://hackmd.io/@ColbyBI377/exercise1_R) |
+| Sept 15 | 1 | Open science; Measurement; Hypothesis testing | [O'Dea et al. 2021](https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-021-01006-3); [Ross-Hellauer 2022](https://www.nature.com/articles/d41586-022-00724-0); Nguyen 2021 ([abstract](https://onlinelibrary.wiley.com/doi/abs/10.1111/phpr.12823) or [video](https://www.youtube.com/watch?v=8JEzXL5OXPI)); [Heard 2023](https://scientistseessquirrel.wordpress.com/2023/11/14/the-case-against-open-data/) | [2. Descriptive statistics, hypothesis testing](https://hackmd.io/@ColbyBI377/exercise2_Htests) |
+| Sept 22 |  | Sampling; ANOVA | [Numbers around us 2024](https://medium.com/number-around-us/guarding-against-misleading-data-503424ecd457); [Bolker 2008](https://math.mcmaster.ca/~bolker/emdbook/Bolker_proofs.pdf) (p5-17); [Navarro 2019 Ch17.1-2](https://learningstatisticswithr.com/book/bayes.html) | [3. Data curation; univariate ANOVA](https://hackmd.io/@ColbyBI377/exercise3) |
+| Sept 29 | 2 | Representing shapes | Zelditch et al. 2012 (p1-17, 23-35); [Crampton 1995](https://www.scup.com/doi/10.1111/j.1502-3931.1995.tb01611.x) | [4. Data acquisition](https://hackmd.io/@ColbyBI377/exercise4) |
+| Oct 6 |  | Procrustes alignment | Zelditch et al. 2012 (p51, 53-57) | [5. Procrustes](https://hackmd.io/@ColbyBI377/exercise5) |
+| Oct 20 | 3 | Morphospace; Ordination | Zelditch et al. 2012 (p59-60, 62-67, 69-73, 75-102) | [6. PCA](https://hackmd.io/@ColbyBI377/exercise6) |
+| Oct 27 |  | Generalized linear modeling | Kondrashov 2016 (p 177-196) | [7. Modeling](https://hackmd.io/@ColbyBI377/exercise7) |
+| Nov 3 | 4 | Disparity; Modularity; Phylogeny | Revell & Harmon 2022; Symonds & Blomberg 2014 | [8. Misc tests](https://hackmd.io/@ColbyBI377/exercise8) |
 | Nov 10 |  | Colorimetry; Residual plots | [Peck et al. 2017](https://doi.org/10.1128/JB.00303-17) Suppl.; [Weller & Westneat 2019](https://peerj.com/articles/6398/) | 9. Planning final projects |
 | Nov 17 | 5 | History and social impacts | [Zhang et al. 2022](https://www.nature.com/articles/s41588-022-01038-7); [Nemeth et al 2025](https://www.sciencedirect.com/science/article/pii/S0003687024001522?via%3Dihub) | 10. Data-gathering |
 | Dec 1 |  | Graphic design; Data visualization; Work on final projects | [O'Donoghue et al. 2018](https://www.annualreviews.org/content/journals/10.1146/annurev-biodatasci-080917-013424) |  |
-| TBD | | Final presentations | |  |
+| TBD | | [Final presentations](https://github.com/aphanotus/BI377.Morphometry/blob/main/guidelines.for.final.projects.md#guidelines-for-final-projects) | |  |
 
