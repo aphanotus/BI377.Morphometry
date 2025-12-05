@@ -1,3 +1,12 @@
+---
+mainfont: Calibri
+output:
+  pdf_document:
+    latex_engine: xelatex
+fontsize: 12pt
+geometry: margin=1.5cm
+---
+
 # BI377  Morphometry: The Study of Form
 
 ![](images/header_seal.jpg)
@@ -127,8 +136,8 @@ If you experience symptoms of a contagious respiratory illness, such as [covid-1
 | Oct 20 | 3 | Morphospace; Ordination | Zelditch et al. 2012 (p59-60, 62-67, 69-73, 75-102) | [6. PCA](https://hackmd.io/@ColbyBI377/exercise6) |
 | Oct 27 |  | Generalized linear modeling | Kondrashov 2016 (p 177-196) | [7. Modeling](https://hackmd.io/@ColbyBI377/exercise7) |
 | Nov 3 | 4 | Disparity; Modularity; Phylogeny | Revell & Harmon 2022; Symonds & Blomberg 2014 | [8. Misc tests](https://hackmd.io/@ColbyBI377/exercise8) |
-| Nov 10 |  | Colorimetry; Residual plots | [Peck et al. 2017](https://doi.org/10.1128/JB.00303-17) Suppl.; [Weller & Westneat 2019](https://peerj.com/articles/6398/) | 9. Planning final projects |
-| Nov 17 | 5 | History and social impacts | [Zhang et al. 2022](https://www.nature.com/articles/s41588-022-01038-7); [Nemeth et al 2025](https://www.sciencedirect.com/science/article/pii/S0003687024001522?via%3Dihub) | 10. Data-gathering |
+| Nov 10 |  | Colorimetry; Residual plots | [Peck et al. 2017](https://doi.org/10.1128/JB.00303-17) Suppl.; [Weller & Westneat 2019](https://peerj.com/articles/6398/) |  |
+| Nov 17 |  | History and social impacts | [Zhang et al. 2022](https://www.nature.com/articles/s41588-022-01038-7); [Nemeth et al 2025](https://www.sciencedirect.com/science/article/pii/S0003687024001522?via%3Dihub) |  |
 | Dec 1 |  | Graphic design; Data visualization; Work on final projects | [O'Donoghue et al. 2018](https://www.annualreviews.org/content/journals/10.1146/annurev-biodatasci-080917-013424) |  |
-| TBD | | [Final presentations](https://github.com/aphanotus/BI377.Morphometry/blob/main/guidelines.for.final.projects.md#guidelines-for-final-projects) | |  |
+| Dec 11 | | [Final presentations](https://github.com/aphanotus/BI377.Morphometry/blob/main/guidelines.for.final.projects.md#guidelines-for-final-projects) | |  |
 
