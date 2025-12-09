@@ -13,47 +13,114 @@
 # Load the library `Momocs`
 library(Momocs)
 
+# Set your working directory to a place one level down from 
+# the folder containing the images for analysis 
 # setwd("~/Documents/5.teaching/openEd/BI377.Morphometry/class4.September29/")
 
-# Defining some additional useful functions (soon to be added to `borealis`!)
-images.to.Out <- function(x, sampling.depth = NULL) {
-  if (is.null(sampling.depth)) {
-    sampling.depth <- min(unique(sort(unlist(lapply(fish, dim))))[-1])
-  }
-  coo.list <- list()
-  for (i in 1:length(x)) {
-    sampled.points <- sample(1:(dim(x[[i]])[1]), sampling.depth, replace = FALSE)
-    # This step finds the contour points from a binary image
-    coo.list[[i]] <- coo_extract(x[[i]], ids = sort(sampled.points))
-  }
-  names(coo.list) <- names(x)
-  return(Out(coo.list))
-} # End of function
-
-check.harmonic.power <- function (x, max.harmonic = 15, tolerance = 0.0001, show.plot = TRUE) {
-  # Error checking: `x` should be a 2-column matrix
-  if (is.null(x) | ((dim(x)[2]) != 2) | (!is.matrix(x))) {
-    stop("Argument `x` should be a 2-column matrix or Outline data type.")
-  }
-  if(is.null(tolerance)) {
-    tolerance <- 1/(max.harmonic)
-  }
+# Defining some useful functions (To be added to `borealis` after this semester)
+{
+  review.outlines <- function(x) {
+    coo.count <- unique(sort(unlist(lapply(x, dim))))[-1]
+    message(paste0("Coordinate number min: ",min(coo.count), "  median: ",median(coo.count), "  max: ",max(coo.count)))
+    number.of.screens <- ceiling(length(x)/4)
+    par(mfrow = c(2, 2)) 
+    if (is(x)[1] == "list") {
+      for (i in 1:number.of.screens) {
+        j <- i*4 -3
+        plot(x[[j]], main = paste0(j,": ",names(x)[j]), asp=c(1,1), xlab = "x", ylab="y")
+        j <- i*4 -2
+        if (j <= length(x)) { plot(x[[j]], main = paste0(j,": ",names(x)[j]), asp=c(1,1), xlab = "x", ylab="y") }
+        j <- i*4 -1
+        if (j <= length(x)) { plot(x[[j]], main = paste0(j,": ",names(x)[j]), asp=c(1,1), xlab = "x", ylab="y") }
+        j <- i*4 -0
+        if (j <= length(x)) { plot(x[[j]], main = paste0(j,": ",names(x)[j]), asp=c(1,1), xlab = "x", ylab="y") }
+        invisible(readline(prompt=paste("Screen",i,"of",number.of.screens," - Press [ENTER] to continue ([ESC] to quit)")))
+      }
+    } else {
+      if (is(x)[1] == "Out") {
+        for (i in 1:number.of.screens) {
+          j <- i*4 -3
+          coo_plot(x[j], main = paste0(j,": ",names(x)[j]))
+          j <- i*4 -2
+          if (j <= length(x)) { coo_plot(x[j], main = paste0(j,": ",names(x)[j])) }
+          j <- i*4 -1
+          if (j <= length(x)) { coo_plot(x[j], main = paste0(j,": ",names(x)[j])) }
+          j <- i*4 -0
+          if (j <= length(x)) { coo_plot(x[j], main = paste0(j,": ",names(x)[j])) }
+          invisible(readline(prompt=paste("Screen",i,"of",number.of.screens," - Press [ENTER] to continue ([ESC] to quit)")))
+        }
+      } else {
+        warning("Unrecognised data structure.")
+      }
+    }
+    par(mfrow = c(1, 1)) 
+  } # End of function
   
-  # Calculate cumulative harmonic power
-  cumulative.harmonic.power <- x %>%
-    efourier(nb.h = max.harmonic) %>%
-    harm_pow() %>%
-    cumsum()
+  images.to.Out <- function(x, sampling.depth = NULL) {
+    if (is(x)[1] != "list") {
+      stop("Unrecognised file format")
+    }
+    if (is.null(sampling.depth)) {
+      sampling.depth <- min(unique(sort(unlist(lapply(x, dim))))[-1])
+      message(paste("Sampling depth set to:", sampling.depth))
+    }
+    if (sampling.depth > min(unique(sort(unlist(lapply(x, dim))))[-1])) {
+      sampling.depth <- min(unique(sort(unlist(lapply(x, dim))))[-1])
+      warning(paste("Sampling depth was set too high! Using the minimum coordinate number:", sampling.depth))
+    }
+    coo.list <- list()
+    for (i in 1:length(x)) {
+      sampled.points <- sample(1:(dim(x[[i]])[1]), sampling.depth, replace = FALSE)
+      # This step finds the contour points from a binary image
+      coo.list[[i]] <- coo_extract(x[[i]], ids = sort(sampled.points))
+    }
+    names(coo.list) <- names(x)
+    return(Out(coo.list))
+  } # End of function
   
-  # Find the median value
-  median.harmonic.power <- median(cumulative.harmonic.power)[1]
-  
-  # Find the relative deviation from the median
-  deviance <- (median.harmonic.power - abs(median.harmonic.power - cumulative.harmonic.power)) / median.harmonic.power
-  
-  # Check for convergence
-  if ((cumulative.harmonic.power[max.harmonic]/median.harmonic.power) - (cumulative.harmonic.power[max.harmonic-round(max.harmonic/3)]/median.harmonic.power) > tolerance) {
+  check.harmonic.power <- function (x, max.harmonic = 15, tolerance = 0.0001, show.plot = TRUE) {
+    # Error checking: `x` should be a 2-column matrix
+    if (is.null(x) | ((dim(x)[2]) != 2) | (!is.matrix(x))) {
+      stop("Argument `x` should be a 2-column matrix or Outline data type.")
+    }
+    if(is.null(tolerance)) {
+      tolerance <- 1/(max.harmonic)
+    }
+    
+    # Calculate cumulative harmonic power
+    cumulative.harmonic.power <- x %>%
+      efourier(nb.h = max.harmonic) %>%
+      harm_pow() %>%
+      cumsum()
+    
+    # Find the median value
+    median.harmonic.power <- median(cumulative.harmonic.power)[1]
+    
+    # Find the relative deviation from the median
+    deviance <- (median.harmonic.power - abs(median.harmonic.power - cumulative.harmonic.power)) / median.harmonic.power
+    
+    # Check for convergence
+    if ((cumulative.harmonic.power[max.harmonic]/median.harmonic.power) - (cumulative.harmonic.power[max.harmonic-round(max.harmonic/3)]/median.harmonic.power) > tolerance) {
+      if (show.plot) {
+        plot(
+          cumulative.harmonic.power,
+          type='o',
+          xlab='Harmonic rank',
+          ylab='Cumulative harmonic power'
+        )
+        abline(h=median.harmonic.power, col = "darkred")
+      }
+      stop(paste0("Process may not have reached stability at `max.harmonic = ",max.harmonic,"`. Consider increasing this value."))
+    }
+    
+    # Flag the first harmonic within tolerance of the median as optimal
+    optimal.harmonic <- which(deviance >=  (1 - tolerance))[1]
+    
+    # Plots
     if (show.plot) {
+      # Two plots panels
+      par(mfrow = c(1,2))
+      
       plot(
         cumulative.harmonic.power,
         type='o',
@@ -61,45 +128,27 @@ check.harmonic.power <- function (x, max.harmonic = 15, tolerance = 0.0001, show
         ylab='Cumulative harmonic power'
       )
       abline(h=median.harmonic.power, col = "darkred")
+      abline(v=optimal.harmonic, col = "darkred")
+      
+      x %T>%
+        coo_plot() %>%
+        # coo_slide(ldk = 2) %>%
+        efourier(
+          nb.h = optimal.harmonic,
+          norm = FALSE
+        ) %>%
+        efourier_i() %T>%
+        coo_draw(
+          coo = .,
+          border="darkred",
+          lwd = 2
+        )
+      par(mfrow = c(1,1))
     }
-    stop(paste0("Process may not have reached stability at `max.harmonic = ",max.harmonic,"`. Consider increasing this value."))
-  }
+    return(optimal.harmonic)
+  } # End of function
   
-  # Flag the first harmonic within tolerance of the median as optimal
-  optimal.harmonic <- which(deviance >=  (1 - tolerance))[1]
-  
-  # Plots
-  if (show.plot) {
-    # Two plots panels
-    par(mfrow = c(1,2))
-    
-    plot(
-      cumulative.harmonic.power,
-      type='o',
-      xlab='Harmonic rank',
-      ylab='Cumulative harmonic power'
-    )
-    abline(h=median.harmonic.power, col = "darkred")
-    abline(v=optimal.harmonic, col = "darkred")
-    
-    x %T>%
-      coo_plot() %>%
-      # coo_slide(ldk = 2) %>%
-      efourier(
-        nb.h = optimal.harmonic,
-        norm = FALSE
-      ) %>%
-      efourier_i() %T>%
-      coo_draw(
-        coo = .,
-        border="darkred",
-        lwd = 2
-      )
-    par(mfrow = c(1,1))
-  }
-  
-  return(optimal.harmonic)
-} # End of function
+}
 
 # Get the file names
 # This command assumes high-contrast image files are in a folder named `wing.outlines`
@@ -108,12 +157,28 @@ check.harmonic.power <- function (x, max.harmonic = 15, tolerance = 0.0001, show
 # Check one of the images, just to confirm
 img_plot(image.files[1])
 
+
+# Note regarding image quality
+# The `Momocs` function for importing images `import_jpg` attempts to detect an 
+# object’s edges using a random seed. So it may work, of it may outline a small
+# feature that is not the intended object. It may works sometimes and not others. 
+# A solution is to select the object of interest in each image using the "magic" 
+# selection tool in Photoshop (which detects edges more reliably), then delete it 
+# and replace it with black (as the foreground color), then invert the selection
+# and delete it in favor of the background (white). This reliably results in a 
+# successful import. However, it can be tedious for a large number of image files.
+
+
 # Import all outlines based on these images
 # Note that the `threshold` argument can be adjusted based on the images' contrast
 wing.outlines <- import_jpg(image.files, threshold = 0.5)
 
+# Review the images, checking that each one is (approximately) the expected shape.
+review.outlines(wing.outlines)
+
 # Convert to the outline (`Out`) format
-# The `sampling.depth` argument can be used to reduced the number of points in large images 
+# A very large number of coordinate points can cause problems for later steps.
+# The `sampling.depth` argument can be used to reduced the number of points.
 wing.outlines <- images.to.Out(wing.outlines, sampling.depth = 2000)
 
 # Add metadata
@@ -123,15 +188,18 @@ wing.outlines$fac <- tibble::tibble(
 )
 
 
-# Check out the outlines
-coo_plot(wing.outlines[1])
+# Review the images again for quality control
+review.outlines(wing.outlines)
 
+# Also possible using tools from `Momocs`
 panel(wing.outlines, fac = "species", names=TRUE)
 
 stack(wing.outlines, fac = "species")
 
+############################################################
+# Generalized Procrustes Analysis (GPA)
+############################################################
 
-# Generalized Procrustes Analysis
 # Note that the function does not calculate centroid size
 # Instead this workflow saves `Csize` as a separate object
 gpa.wing.outlines <- fgProcrustes(wing.outlines)
