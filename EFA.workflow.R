@@ -20,11 +20,11 @@ library(Momocs)
 # Defining some useful functions (To be added to `borealis` after this semester)
 {
   review.outlines <- function(x) {
-    coo.count <- unique(sort(unlist(lapply(x, dim))))[-1]
-    message(paste0("Coordinate number min: ",min(coo.count), "  median: ",median(coo.count), "  max: ",max(coo.count)))
     number.of.screens <- ceiling(length(x)/4)
     par(mfrow = c(2, 2)) 
     if (is(x)[1] == "list") {
+      coo.count <- unique(sort(unlist(lapply(x, dim))))[-1]
+      message(paste0("Coordinate number min: ",min(coo.count), "  median: ",median(coo.count), "  max: ",max(coo.count)))
       for (i in 1:number.of.screens) {
         j <- i*4 -3
         plot(x[[j]], main = paste0(j,": ",names(x)[j]), asp=c(1,1), xlab = "x", ylab="y")
@@ -38,6 +38,8 @@ library(Momocs)
       }
     } else {
       if (is(x)[1] == "Out") {
+        coo.count <- unique(sort(unlist(lapply(x$coo, function(x) {dim(as.data.frame(x))}))))[-1]
+        message(paste0("Coordinate number min: ",min(coo.count), "  median: ",median(coo.count), "  max: ",max(coo.count)))
         for (i in 1:number.of.screens) {
           j <- i*4 -3
           coo_plot(x[j], main = paste0(j,": ",names(x)[j]))
