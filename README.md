@@ -58,25 +58,25 @@ Class rosters are provided to each instructor with each student's legal name. I 
 
 During this course we will explore the principles of [open data](https://opendatahandbook.org/guide/en/what-is-open-data/) and [open science](https://www.cos.io/about). In that spirit, the [syllabus](https://github.com/aphanotus/openEd/blob/main/BI377.morphometry/BI377.24F.morphometry.syllabus.md) and other static resources are available and updated on [GitHub](https://github.com/aphanotus/openEd/tree/main/BI377.morphometry). Copyrighted materials will be shared using Colby's learning management system, [Moodle](https://moodle.colby.edu/). We will make measurements of photographic data using the free imaging suite [Fiji](https://imagej.net/software/fiji/). Students should be familiar with [Google Sheets](https://workspace.google.com/products/sheets/), where we will share data. We will introduce analytical tools and pipelines in the statistical programming language [R](https://www.r-project.org/), using Colby's [Rstudio](https://posit.co/products/open-source/rstudio/) server accessible at https://rstudio.colby.edu/  To access this resource on campus you must use the[Colby Access](https://colby.teamdynamix.com/TDClient/1928/Portal/KB/ArticleDet?ID=156229) WiFi system. Off-campus you can access the Rstudio server by running Colby's [VPN client](https://colby.teamdynamix.com/TDClient/1928/Portal/KB/ArticleDet?ID=140022). To facilitate peer-to-peer collaboration on coding, we will use [Markdown](https://www.markdownguide.org/) via [HackMD](https://hackmd.io/@ColbyBI377/landingpage). Each student will be asked to set-up a free account with [HackMD](https://hackmd.io/). 
 
-- ### Assessments
+### Assessments
 
-  Based on our conversations in the first two weeks in this semester, we will adopt an approach know as  **ungrading**. This approach will still assign a letter grade for the course at the end of the semester. However, instead of awarding points for individual assessments throughout the semester, you will build a portfolio of work, consisting of the exercises, quizzes, DataBlitz presentations and the final project. My goal will each assignment will be to provide you with constructive feedback, but you will not receive a numeric or letter grade on individual assignments. I will meet with each of you at least once mid-semester to candidly discuss your progress and again at the end of the semester to discuss the grade you will be assigned. You and I are able to discuss the final grade as something that should reflect your effort and the trajectory of your learning across the semester without *a priori* assumptions. Compared to traditional grading systems, receiving only descriptive feedback in ungrading may lead to some uncertainty about your standing in the course. This system is based on communication, so if you ever feel uncertain, please come and talk with me!
+Based on our conversations in the first two weeks in this semester, we will adopt an approach know as  **ungrading**. This approach will still assign a letter grade for the course at the end of the semester. However, instead of awarding points for individual assessments throughout the semester, you will build a portfolio of work, consisting of the exercises, quizzes, DataBlitz presentations and the final project. My goal will each assignment will be to provide you with constructive feedback, but you will not receive a numeric or letter grade on individual assignments. I will meet with each of you at least once mid-semester to candidly discuss your progress and again at the end of the semester to discuss the grade you will be assigned. You and I are able to discuss the final grade as something that should reflect your effort and the trajectory of your learning across the semester without *a priori* assumptions. Compared to traditional grading systems, receiving only descriptive feedback in ungrading may lead to some uncertainty about your standing in the course. This system is based on communication, so if you ever feel uncertain, please come and talk with me!
 
-  | course assignments                    | number |
-  | :------------------------------------ | -----: |
-  | Participation & Engagement            |        |
-  | Literature presentations (DataBlitzs) |      2 |
-  | Quizzes                               |      5 |
-  | Exercises                             |     10 |
-  | Final presentation                    |      1 |
-  | Final project                         |      1 |
+| course assignments                    | number |
+| :------------------------------------ | -----: |
+| Participation & Engagement            |        |
+| Literature presentations (DataBlitzs) |      2 |
+| Quizzes                               |      5 |
+| Exercises                             |     10 |
+| Final presentation                    |      1 |
+| Final project                         |      1 |
 
-  - **Participation** in all discussions is expected. Be ready and willing to share an informed thought during each class. If you are uncomfortable expressing yourself in class, please discuss this with me during office hours. 
-  - Most class meetings will include one or more short (5 min) student **presentations** of recent primary literature using methods covered in this course, followed by questions and discussion led by the presenting student. This is opportunity for students to share their own interests and practice presentation.
+- **Participation** in all discussions is expected. Be ready and willing to share an informed thought during each class. If you are uncomfortable expressing yourself in class, please discuss this with me during office hours. 
+- Most class meetings will include one or more short (5 min) student **presentations** of recent primary literature using methods covered in this course, followed by questions and discussion led by the presenting student. This is opportunity for students to share their own interests and practice presentation.
 
-  - Roughly bi-weekly **quizzes** will check students' understanding of fundamental course concepts. 
-  - Weekly **exercises** will allow students to practice and develop new skills. These assignments will be a mix of individual and team exercises. Grades for these assignments will be satisfactory, needs improvement, or unsatisfactory. More detailed feedback may be provided on the returned exercises, to the entire class in a subsequent meeting, or in one-on-one consultation.
-  - Your **final project** will use morphometric methods to conduct your own comparative study, or a meta-analysis or re-analysis of published data. These projects will be conducted in small groups of 2-3 students, in close consultation with Dr. Angelini. Finished projects will be presented as posters at the end of the semester.
+- Roughly bi-weekly **quizzes** will check students' understanding of fundamental course concepts. 
+- Weekly **exercises** will allow students to practice and develop new skills. These assignments will be a mix of individual and team exercises. Grades for these assignments will be satisfactory, needs improvement, or unsatisfactory. More detailed feedback may be provided on the returned exercises, to the entire class in a subsequent meeting, or in one-on-one consultation.
+- Your **final project** will use morphometric methods to conduct your own comparative study, or a meta-analysis or re-analysis of published data. These projects will be conducted in small groups of 2-3 students, in close consultation with Dr. Angelini. Finished projects will be presented as posters at the end of the semester.
 
 #### Template for conversations on final grade assignment
 
