@@ -1,12 +1,3 @@
----
-mainfont: Calibri
-output:
-  pdf_document:
-    latex_engine: xelatex
-fontsize: 12pt
-geometry: margin=1.5cm
----
-
 # BI377  Morphometry: The Study of Form
 
 ![](images/header_seal.jpg)
